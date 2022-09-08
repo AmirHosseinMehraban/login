@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+ Welcome to GFG - Django Login!!
+ Hello {{ name }}!!
+this email is for reset your passsword
+
+ Confirmation Link: http://{{ domain }}{% url 'reset_password' uidb64=uid token=token %} 
+
+ {% endautoescape %}

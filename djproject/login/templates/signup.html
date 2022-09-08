@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <title>Sign Up</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% load static %}
+
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <section class="first_section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text_wrap text_center login_back">
+                        <div class="w_100 text">
+                            <h2 class="h2_login">Welcome to sign up</h2>
+                            <p>Do you have an account?</p>
+                            <a href="/" class="btn">sign in</a>
+                        </div>
+                    </div>
+                    <div class="login-wrap wrap">
+                        <form action="/signup" method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="name" class="label">First name</label>
+                                <input type="text" name="fname" class="form-input" placeholder="First Name" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="label">Last name</label>
+                                <input type="text" name="lname" class="form-input" placeholder="Last Name" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="label">Username</label>
+                                <input type="text" name="username" class="form-input" placeholder="Username" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="label">Password</label>
+                                <input type="password" name="pass1" class="form-input" placeholder="Password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="label">Password</label>
+                                <input type="password" name="pass2" class="form-input" placeholder="Password" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="label">Password</label>
+                                <input type="email" name="email" class="form-input" placeholder="Email" required>
+                            </div>
+                            <div class="form-group mb-6">
+                                <button class="btn form-input btn-primary" type="submit">Sign Up</button>
+                            </div>
+                            <label for="or" class="label-form">Or Sign Up Using </label>
+                            <div style="display: flex; margin-top: 2rem;"></div>
+                                <a href="#" class="btn-signup facebook margin-i" >
+                                    <i class="fa fa-facebook " ></i>
+                                </a>
+                                <a href="#" class="btn-signup twitter margin-i" >
+                                    <i class="fa fa-twitter " ></i>
+                                </a>
+                                <a href="#" class="btn-signup google margin-i" >
+                                    <i class="fa fa-google " ></i>
+                                </a>
+                                <a href="#" class="btn-signup linkedin margin-i" >
+                                    <i class="fa fa-linkedin " ></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>

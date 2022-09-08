@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <title>Forgot Password</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% load static %}
+
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <section class="first_section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text_wrap text_center login_back">
+                        <div class="w_100 text">
+                            <h2 class="h2_login2">Welcome to sign up</h2>
+                            <p>Do you have an account?</p>
+                            <a href="/" class="btn">sign in</a>
+                        </div>
+                    </div>
+                    <div class="login-wrap wrap">
+                        <form action="/forgot" method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="username" class="label">Username</label>
+                                <input type="text" name="username" class="form-input" placeholder="Username" required>
+
+                            </div>
+                            <div class="form-group mb-6">
+                                <button class="btn form-input btn-primary" type="submit">forgot password</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
